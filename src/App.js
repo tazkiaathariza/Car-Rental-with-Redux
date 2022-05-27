@@ -1,4 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import SearchPage from './pages/SearchPage';
+
+function App() {
+	return (
+		<>
+			<Routes>
+				<Route exact path='/' element={< LandingPage />}></Route>
+				<Route exact path='/cariMobil' element={< SearchPage  />}></Route>
+			</Routes>
+		</>
+	);
+}
+
+export default App;
+
+/* import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import SearchPage from './pages/SearchPage';
@@ -18,4 +36,4 @@ render() {
 	}
 }
 
-export default App;
+export default App; */
